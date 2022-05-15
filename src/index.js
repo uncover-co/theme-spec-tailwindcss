@@ -49,7 +49,9 @@ colorVariables.forEach((variable) => {
 });
 
 module.exports = plugin.withOptions(
-  (options) => {
+  (userOptions) => {
+    const options = userOptions ?? {};
+
     return ({ addBase }) => {
       if (options.strict) {
         addBase({
@@ -82,7 +84,8 @@ module.exports = plugin.withOptions(
       }
     };
   },
-  (options) => {
+  (userOptions) => {
+    const options = userOptions ?? {};
     const extraColors = (options.colors || []).reduce((acc, color) => {
       acc[color] = withOpacityValue(`--${namespace}-${color}-ch`);
       return acc;
