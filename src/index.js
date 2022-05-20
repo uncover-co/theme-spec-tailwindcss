@@ -87,7 +87,7 @@ module.exports = plugin.withOptions(
   (userOptions) => {
     const options = userOptions ?? {};
     const extraColors = (options.colors || []).reduce((acc, color) => {
-      acc[color] = withOpacityValue(`--${namespace}-${color}-ch`);
+      acc[color] = withOpacityValue(`--${color}`);
       return acc;
     }, {});
 
