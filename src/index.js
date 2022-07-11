@@ -15,7 +15,7 @@ const fontVariables = {
 const colorVariants = ["-bg", "-fg", "-aux"];
 const colorChannels = "-ch";
 const colorVariables = [
-    "baseline",
+    "base",
     "primary",
     "secondary",
     "success",
@@ -55,7 +55,8 @@ module.exports = plugin.withOptions(
             if (options.strict) {
                 addBase({
                     body: {
-                        background: toVar(`--${namespace}-background`),
+                        background: toVar(`--${namespace}-base-bg`),
+                        color: toVar(`--${namespace}-base-fg`),
                         fontFamily: toVar(fontFamily.text),
                     },
                     h1: {
