@@ -1,6 +1,6 @@
 {
   "name": "@uncover-co/theme-spec-tailwindcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use theme-spec values with tailwindcss.",
   "main": "src/index.js",
   "author": "Georges Boris",
